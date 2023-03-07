@@ -1,25 +1,24 @@
+using ServeRestSharp.Requests;
 using ServeRestSharp.Responses.Login;
+using ServeRestSharp.Responses.Users;
 using ServeRestSharp.Services;
+using ServeRestSharp.Support;
+using System;
 
 namespace Tests.ServeRestSharp;
 
 [TestFixture, Category("Login")]
 public class LoginTests
 {
-    [SetUp]
-    public void SetUp()
-    {
-        // TODO: Creates a user on setup
-    }
-
     [Test, Description("Should login sucessfully with valid credentials")]
     public async Task SuccessfullyLogin()
     {
-        // Arrange 
-        var email = "fulano@qa.com"; var password = "teste";
+        // Arrange
+        var user = await Commands.CreateRandomUser();
+        var payload = new PostLoginBody { Email = user.Email, Password = user.Password };
 
         // Act
-        var response = await LoginServices.PostLogin(email, password);
+        var response = await LoginServices.PostLogin(payload);
 
         // Assert
         response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
@@ -33,10 +32,10 @@ public class LoginTests
     {
         // Arrange
         var faker = new Faker();
-        var email = faker.Internet.Email(); var password = faker.Internet.Password();
+        var payload = new PostLoginBody { Email = faker.Internet.Email(), Password = faker.Internet.Password() };
 
         // Act
-        var response = await LoginServices.PostLogin(email, password);
+        var response = await LoginServices.PostLogin(payload);
 
         // Assert
         response.StatusCode.Should().Be(System.Net.HttpStatusCode.Unauthorized);
