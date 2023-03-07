@@ -1,5 +1,4 @@
-﻿
-namespace ServeRestSharp.Responses.Users;
+﻿namespace ServeRestSharp.Responses.Users;
 
 public class PostUserSuccessfullyResponse
 {
