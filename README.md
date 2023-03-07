@@ -15,15 +15,19 @@ Para executar esse projeto é necessário:
 
 `dotnet test --filter TestCategory=Login` - executa todos os testes/fixtures que possuam a categoria "Login", por exemplo.
 
+`dotnet test --logger "html;logfilename=report.html"` - executa todos os testes e gera o arquivo de report .html no diretório "TestResults"
+
+`dotnet test --filter TestCategory=Login --logger "html;logfilename=report.html"` - executa os testes filtando pela categoria e gera o report
+
 ## W.I.P.
 
 Este projeto ainda está em desenvolvimento, e os próximos passos são:
 
-- Desenvolver testes dos endpoints de Usuários e Produtos;
-- Criar o workflow no GitHub Actions para execução dos testes em pipeline de CI.
+~~- Criar o workflow no GitHub Actions para execução dos testes em pipeline de CI~~
+- Desenvolver testes dos endpoints de Usuários e Produtos
 
 ___
 
-Se você tem alguma dúvida ou sugestão, entre em contato! Vamos bater um papo ☕
+Se você tem alguma dúvida ou sugestão, entre em contato! Vamos bater um papo e tomar um café ☕
 
 Feito com 💜 por Bruno Quintanilha.
