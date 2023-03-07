@@ -1,9 +1,8 @@
+using Bogus;
 using ServeRestSharp.Requests;
 using ServeRestSharp.Responses.Login;
-using ServeRestSharp.Responses.Users;
 using ServeRestSharp.Services;
 using ServeRestSharp.Support;
-using System;
 
 namespace Tests.ServeRestSharp;
 

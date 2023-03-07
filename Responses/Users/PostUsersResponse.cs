@@ -1,6 +1,4 @@
 ﻿
-using System.Text.Json.Serialization;
-
 namespace ServeRestSharp.Responses.Users;
 
 public class PostUserSuccessfullyResponse

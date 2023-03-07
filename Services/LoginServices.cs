@@ -1,4 +1,6 @@
-﻿using ServeRestSharp.Requests;
+﻿using System.Threading.Tasks;
+using RestSharp;
+using ServeRestSharp.Requests;
 
 namespace ServeRestSharp.Services;
 
