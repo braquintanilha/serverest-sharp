@@ -22,4 +22,10 @@ jobs:
           dotnet-version: '6.0'
 
       - name: Run tests
-        run: dotnet test
+        run: dotnet test --logger "html;logfilename=report.html"
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v3
+        with:
+          name: Report
+          path: TestResults/report.html
