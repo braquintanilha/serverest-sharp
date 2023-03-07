@@ -40,6 +40,6 @@ public class LoginTests
         // Assert
         response.StatusCode.Should().Be(System.Net.HttpStatusCode.Unauthorized);
         var body = JsonConvert.DeserializeObject<PostLoginInvalidResponse>(response?.Content!);
-        body?.Message.Should().Be("Email e/ou senha inv·lidos");
+        body?.Message.Should().Be("Email e/ou senha inv√°lidos");
     }
 }
