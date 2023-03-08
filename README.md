@@ -8,6 +8,8 @@ Para executar esse projeto é necessário o [.NET 6](https://dotnet.microsoft.co
 
 ## Execução dos testes
 
+Com o projeto já clonado e o .NET instalado corretamente no seu ambiente, basta executar os seguintes comandos na __raíz do projeto__ para executar os testes:
+
 `dotnet test` - executa todos os testes;
 
 `dotnet test --filter TestCategory=Login` - executa todos os testes/fixtures que possuam a categoria "Login", por exemplo.
