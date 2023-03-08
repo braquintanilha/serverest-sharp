@@ -23,7 +23,7 @@ Para executar esse projeto é necessário:
 
 Este projeto ainda está em desenvolvimento, e os próximos passos são:
 
-~~- Criar o workflow no GitHub Actions para execução dos testes em pipeline de CI~~
+- ~~Criar o workflow no GitHub Actions para execução dos testes em pipeline de CI~~
 - Desenvolver testes dos endpoints de Usuários e Produtos
 
 ___
