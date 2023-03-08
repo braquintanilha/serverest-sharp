@@ -7,6 +7,7 @@ using ServeRestSharp.Support;
 namespace Tests.ServeRestSharp;
 
 [TestFixture, Category("Login")]
+[Parallelizable]
 public class LoginTests
 {
     [Test, Description("Should login sucessfully with valid credentials")]
