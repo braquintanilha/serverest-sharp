@@ -29,3 +29,4 @@ jobs:
         with:
           name: Report
           path: TestResults/report.html
+          retention-days: 3
