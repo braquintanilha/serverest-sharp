@@ -1,4 +1,3 @@
-using System;
 using ServeRestSharp.Responses.Users;
 using ServeRestSharp.Services;
 using ServeRestSharp.Support;
