@@ -4,15 +4,27 @@ namespace ServeRestSharp.Responses.Users;
 
 public class GetUsersSuccessfullyResponse
 {
-    public int Quantidade { get; set; }
-    public List<Usuario>? Usuarios { get; set; }
-}
+        [JsonProperty("quantidade")]
+        public int Quantidade { get; set; }
 
-public class Usuario
-{
-    public string? Nome { get; set; }
-    public string? Email { get; set; }
-    public string? Password { get; set; }
-    public string? Administrador { get; set; }
-    public string? _Id { get; set; }
-}
+        [JsonProperty("usuarios")]
+        public List<User>? Users { get; set; }
+    }
+
+    public class User
+    {
+        [JsonProperty("nome")]
+        public string? Nome { get; set; }
+
+        [JsonProperty("email")]
+        public string? Email { get; set; }
+
+        [JsonProperty("password")]
+        public string? Password { get; set; }
+
+        [JsonProperty("administrador")]
+        public string? Administrador { get; set; }
+
+        [JsonProperty("_id")]
+        public string? Id { get; set; }
+    }
