@@ -4,7 +4,7 @@ using ServeRestSharp.Responses.Login;
 using ServeRestSharp.Services;
 using ServeRestSharp.Support;
 
-namespace Tests.ServeRestSharp;
+namespace ServeRestSharp.Tests;
 
 [TestFixture, Category("Login")]
 [Parallelizable]
@@ -22,7 +22,7 @@ public class LoginTests
 
         // Assert
         response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
-        var body = JsonConvert.DeserializeObject<PostLoginSuccessfullyResponse>(response?.Content!);
+        var body = JsonConvert.DeserializeObject<PostLoginSuccessfullyResponse>(response.Content!);
         body?.Message.Should().Be("Login realizado com sucesso");
         body?.Authorization.Should().Contain("Bearer");
     }
@@ -39,7 +39,7 @@ public class LoginTests
 
         // Assert
         response.StatusCode.Should().Be(System.Net.HttpStatusCode.Unauthorized);
-        var body = JsonConvert.DeserializeObject<PostLoginInvalidResponse>(response?.Content!);
+        var body = JsonConvert.DeserializeObject<PostLoginInvalidResponse>(response.Content!);
         body?.Message.Should().Be("Email e/ou senha inválidos");
     }
 }
