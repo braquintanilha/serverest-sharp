@@ -16,7 +16,7 @@ public class LoginTests
     {
         // Arrange
         var user = await Commands.CreateRandomUser();
-        var payload = new PostLoginBody { Email = user.Email, Password = user.Password };
+        var payload = new PostLoginBody(user.Email!, user.Password!);
 
         // Act
         var response = await LoginServices.PostLogin(payload);
@@ -33,7 +33,7 @@ public class LoginTests
     {
         // Arrange
         var faker = new Faker();
-        var payload = new PostLoginBody { Email = faker.Internet.Email(), Password = faker.Internet.Password() };
+        var payload = new PostLoginBody(faker.Internet.Email(), faker.Internet.Password());
 
         // Act
         var response = await LoginServices.PostLogin(payload);

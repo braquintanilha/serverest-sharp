@@ -15,4 +15,12 @@ public class PostUserBody
 
     [JsonPropertyName("administrador")]
     public string? Administrator { get; set; }
+
+    public PostUserBody(string name, string email, string password, string admin = "false")
+    {
+        Name = name;
+        Email = email;
+        Password = password;
+        Administrator = admin;
+    }
 }
