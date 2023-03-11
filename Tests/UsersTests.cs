@@ -7,7 +7,8 @@ using ServeRestSharp.Support;
 
 namespace ServeRestSharp.Tests;
 
-[TestFixture, Category("Users")]
+[TestFixture] 
+[Category("Users")]
 [Parallelizable]
 public class UsersTests
 {

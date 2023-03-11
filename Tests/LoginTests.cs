@@ -6,7 +6,8 @@ using ServeRestSharp.Support;
 
 namespace ServeRestSharp.Tests;
 
-[TestFixture, Category("Login")]
+[TestFixture] 
+[Category("Login")]
 [Parallelizable]
 public class LoginTests
 {
