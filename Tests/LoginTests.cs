@@ -11,7 +11,7 @@ namespace ServeRestSharp.Tests;
 public class LoginTests
 {
     [Test, Description("Should login sucessfully with valid credentials")]
-    public async Task SuccessfullyLogin()
+    public async Task Login_Success()
     {
         // Arrange
         var user = await Commands.CreateRandomUser();
@@ -28,7 +28,7 @@ public class LoginTests
     }
 
     [Test, Description("Should not login with invalid credentials")]
-    public async Task InvalidLogin()
+    public async Task Login_Unauthorized()
     {
         // Arrange
         var faker = new Faker();
