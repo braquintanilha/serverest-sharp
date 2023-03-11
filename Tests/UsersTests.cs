@@ -1,4 +1,3 @@
-using System;
 using Bogus;
 using ServeRestSharp.Requests;
 using ServeRestSharp.Responses.Users;
