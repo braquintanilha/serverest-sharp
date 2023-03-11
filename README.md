@@ -1,10 +1,10 @@
 # ServeRest Sharp
 
-Olá, seja bem-vindo!! Esse é um projeto estudos de testes de API em .NET 6 com C#, NUnit e RestSharp para o simulador de loja virtual ServeRest API. Para acessar a documentação do ServeRest basta acessar https://serverest.dev/
+Olá, seja bem-vindo!! Esse é um projeto estudos de testes de API em .NET 7 com C#, NUnit e RestSharp para o simulador de loja virtual ServeRest API. Para acessar a documentação do ServeRest basta acessar https://serverest.dev/
 
 ## Pré-requisitos
 
-Para executar esse projeto é necessário o [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) (Runtime ou SDK). 
+Para executar esse projeto é necessário o [.NET 7](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) (Runtime ou SDK). 
 
 ## Execução dos testes
 
