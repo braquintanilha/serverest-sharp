@@ -25,8 +25,8 @@ Com o projeto já clonado e o .NET instalado corretamente no seu ambiente, basta
 Esse projeto possui um workflow do GitHub Actions que executa todos os testes à partir dos seguintes triggers:
 
 - Pull request no branch __main__
-- Push no branch __main__
 - Workflow dispatch (trigger manual)
+- Schedulle - o workflow é executado diariamente às 8h
 
 Após a execução, o arquivo de report (html) é disponibilizado no __summary__ da workflow.
 
