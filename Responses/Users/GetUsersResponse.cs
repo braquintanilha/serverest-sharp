@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace ServeRestSharp.Responses.Users;
 
-public class GetUsersSuccessfully
+public class GetUsersSuccessfullyResponse
 {
     public int Quantidade { get; set; }
     public List<Usuario>? Usuarios { get; set; }

@@ -16,14 +16,14 @@ public class UsersTests
     {
         // Arrange
         var resGetList = await UsersServices.GetUserList();
-        var userId = JsonConvert.DeserializeObject<GetUsersSuccessfully>(resGetList.Content!)?.Usuarios?[0]._Id!;
+        var userId = JsonConvert.DeserializeObject<GetUsersSuccessfullyResponse>(resGetList.Content!)?.Usuarios?[0]._Id!;
 
         // Act
         var response = await UsersServices.GetUserById(userId);
 
         // Assert
         response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
-        var body = JsonConvert.DeserializeObject<GetUsersSuccessfully>(response.Content!);
+        var body = JsonConvert.DeserializeObject<GetUsersSuccessfullyResponse>(response.Content!);
     }
 
     [Test, Description("Should not return a user by invalid id")]
