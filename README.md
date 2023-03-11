@@ -22,7 +22,7 @@ Com o projeto já clonado e o .NET instalado corretamente no seu ambiente, basta
 
 ## GitHub Actions
 
-Esse projeto possui um workflow que executa todos os testes à partir dos seguintes triggers:
+Esse projeto possui um workflow do GitHub Actions que executa todos os testes à partir dos seguintes triggers:
 
 - Pull request no branch __main__
 - Push no branch __main__
