@@ -1,6 +1,8 @@
 # ServeRest Sharp
 
-Olá, seja bem-vindo!! Esse é um projeto estudos de testes de API em .NET 7 com C#, NUnit e RestSharp para o simulador de loja virtual ServeRest API. Para acessar a documentação do ServeRest basta acessar https://serverest.dev/
+Olá, seja bem-vindo!! Esse é um projeto estudos de testes de API em __.NET 7 com C#, NUnit e RestSharp__ para o simulador de loja virtual ServeRest API. 
+
+Documentação do ServeRest: https://serverest.dev/
 
 ## Pré-requisitos
 
@@ -18,6 +20,16 @@ Com o projeto já clonado e o .NET instalado corretamente no seu ambiente, basta
 
 `dotnet test --filter TestCategory=Login --logger "html;logfilename=report.html"` - executa os testes filtando pela categoria e gera o report
 
+## GitHub Actions
+
+Esse projeto possui um workflow que executa todos os testes à partir dos seguintes triggers:
+
+- Pull request no branch __main__
+- Push no branch __main__
+- Workflow dispatch (trigger manual)
+
+Após a execução, o arquivo de report (html) é disponibilizado no __summary__ da workflow.
+
 ## W.I.P.
 
 Este projeto ainda está em desenvolvimento, e os próximos passos são:
@@ -28,6 +40,6 @@ Este projeto ainda está em desenvolvimento, e os próximos passos são:
 
 ___
 
-Se você tem alguma dúvida ou sugestão, entre em contato! Vamos bater um papo e tomar um café ☕
+Se você tem alguma dúvida ou sugestão, entre em contato! Vamos tomar um café ☕
 
 Feito com 💜 por Bruno Quintanilha.
