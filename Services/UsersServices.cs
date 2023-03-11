@@ -16,8 +16,7 @@ public static class UsersServices
 
     public static async Task<RestResponse> GetUserById(string userId)
     {
-        var request = new RestRequest("usuarios")
-            .AddParameter("_id", userId);
+        var request = new RestRequest($"usuarios/{userId}");
 
         return await client.ExecuteGetAsync(request);
     }
