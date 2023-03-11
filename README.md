@@ -23,7 +23,8 @@ Com o projeto já clonado e o .NET instalado corretamente no seu ambiente, basta
 Este projeto ainda está em desenvolvimento, e os próximos passos são:
 
 - ~~Criar o workflow no GitHub Actions para execução dos testes em pipeline de CI~~
-- Desenvolver testes dos endpoints de Usuários e Produtos
+- ~~Desenvolver testes dos endpoints de Usuários~~
+- Desenvolver testes dos endpoints de Produtos
 
 ___
 
