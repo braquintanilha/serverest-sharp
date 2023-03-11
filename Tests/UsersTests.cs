@@ -53,7 +53,7 @@ public class UsersTests
         response.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
         var body = JsonConvert.DeserializeObject<PostUserSuccessfullyResponse>(response.Content!);
         body?.Message.Should().Be("Cadastro realizado com sucesso");
-        body?._Id.Should().NotBeNullOrEmpty();
+        body?.Id.Should().NotBeNullOrEmpty();
     }
 
     [Test, Description("Should delete a user without registered cart")]

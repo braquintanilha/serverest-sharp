@@ -15,7 +15,7 @@ public static class Commands
 
         var response = await UsersServices.PostUser(createUserPayload);
         response.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
-        var userId = JsonConvert.DeserializeObject<PostUserSuccessfullyResponse>(response.Content!)?._Id;
+        var userId = JsonConvert.DeserializeObject<PostUserSuccessfullyResponse>(response.Content!)?.Id;
 
         return new User
         {
