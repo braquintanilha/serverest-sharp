@@ -16,7 +16,7 @@ public class UsersTests
     {
         // Arrange
         var resGetList = await UsersServices.GetUserList();
-        var userId = JsonConvert.DeserializeObject<GetUsersSuccessfullyResponse>(resGetList.Content!)?.Usuarios?[0]._Id!;
+        var userId = JsonConvert.DeserializeObject<GetUsersSuccessfullyResponse>(resGetList.Content!)?.Users?[0].Id!;
 
         // Act
         var response = await UsersServices.GetUserById(userId);
@@ -53,7 +53,7 @@ public class UsersTests
         response.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
         var body = JsonConvert.DeserializeObject<PostUserSuccessfullyResponse>(response.Content!);
         body?.Message.Should().Be("Cadastro realizado com sucesso");
-        body?._Id.Should().NotBeNullOrEmpty();
+        body?.Id.Should().NotBeNullOrEmpty();
     }
 
     [Test, Description("Should delete a user without registered cart")]
@@ -63,7 +63,7 @@ public class UsersTests
         var createdUser = await Commands.CreateRandomUser();
 
         // Act
-        var response = await UsersServices.DeleteUser(createdUser._Id!);
+        var response = await UsersServices.DeleteUser(createdUser.Id);
 
         // Assert
         response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);

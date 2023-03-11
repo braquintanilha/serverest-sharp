@@ -7,7 +7,7 @@ namespace ServeRestSharp.Support;
 
 public static class Commands
 {
-    public static async Task<Usuario> CreateRandomUser()
+    public static async Task<User> CreateRandomUser()
     {
         var faker = new Faker();
 
@@ -15,15 +15,15 @@ public static class Commands
 
         var response = await UsersServices.PostUser(createUserPayload);
         response.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
-        var userId = JsonConvert.DeserializeObject<PostUserSuccessfullyResponse>(response.Content!)?._Id;
+        var userId = JsonConvert.DeserializeObject<PostUserSuccessfullyResponse>(response.Content!)?.Id;
 
-        return new Usuario
+        return new User
         {
             Nome = createUserPayload.Name,
             Email = createUserPayload.Email,
             Password = createUserPayload.Password,
             Administrador = createUserPayload.Administrator,
-            _Id = userId
+            Id = userId
         };
     }
 }

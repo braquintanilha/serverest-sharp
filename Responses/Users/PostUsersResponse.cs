@@ -2,6 +2,9 @@
 
 public class PostUserSuccessfullyResponse
 {
-    public string? Message { get; set; }
-    public string? _Id { get; set; }
-}
+        [JsonProperty("message")]
+        public string? Message { get; set; }
+
+        [JsonProperty("_id")]
+        public string? Id { get; set; }
+    }
