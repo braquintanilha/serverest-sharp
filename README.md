@@ -6,7 +6,9 @@ Documentação do ServeRest: https://serverest.dev/
 
 ## Pré-requisitos
 
-Para executar esse projeto é necessário o [.NET 7](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) (Runtime ou SDK). 
+Para executar esse projeto é necessário o [.NET 7](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) (Runtime ou SDK).
+
+Todas as dependências estão listadas no arquivo `ServeRestSharp.csproj`. Dessa forma, basta executar os comandos listados abaixo que o build é realizado e as dependências são instaladas automaticamente através do gerenciador de pacotes **NuGet**.
 
 ## Execução dos testes
 
