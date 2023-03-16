@@ -30,7 +30,7 @@ Esse projeto possui um workflow do GitHub Actions que executa todos os testes à
 - Workflow dispatch (trigger manual)
 - Schedulle - o workflow é executado diariamente às 8h
 
-Após a execução, o arquivo de report (html) é disponibilizado no __summary__ da workflow.
+Após a execução, o arquivo **report.html** (test logger) é disponibilizado no __summary__ do workflow.
 
 ___
 
