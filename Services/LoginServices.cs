@@ -5,7 +5,7 @@ namespace ServeRestSharp.Services;
 
 public static class LoginServices
 {
-    private static readonly RestClient client = new ("https://serverest.dev");
+    private static readonly RestClient _client = new ("https://serverest.dev");
 
     public static async Task<RestResponse> PostLogin(PostLoginBody body)
     {
@@ -13,6 +13,6 @@ public static class LoginServices
         var request = new RestRequest("login")
             .AddBody(body);
 
-        return await client.ExecutePostAsync(request);
+        return await _client.ExecutePostAsync(request);
     }
 }

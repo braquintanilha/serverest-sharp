@@ -5,20 +5,20 @@ namespace ServeRestSharp.Services;
 
 public static class UsersServices
 {
-    private static readonly RestClient client = new("https://serverest.dev");
+    private static readonly RestClient _client = new ("https://serverest.dev");
 
     public static async Task<RestResponse> GetUserList()
     {
         var request = new RestRequest("usuarios");
 
-        return await client.ExecuteGetAsync(request);
+        return await _client.ExecuteGetAsync(request);
     }
 
     public static async Task<RestResponse> GetUserById(string userId)
     {
         var request = new RestRequest($"usuarios/{userId}");
 
-        return await client.ExecuteGetAsync(request);
+        return await _client.ExecuteGetAsync(request);
     }
 
     public static async Task<RestResponse> PostUser(PostUserBody body)
@@ -26,13 +26,13 @@ public static class UsersServices
         var request = new RestRequest("usuarios")
             .AddBody(body);
 
-        return await client.ExecutePostAsync(request);
+        return await _client.ExecutePostAsync(request);
     }
 
     public static async Task<RestResponse> DeleteUser(string? id)
     {
         var request = new RestRequest($"usuarios/${id}");
 
-        return await client.DeleteAsync(request);
+        return await _client.DeleteAsync(request);
     }
 }

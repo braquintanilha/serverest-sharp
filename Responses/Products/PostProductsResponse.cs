@@ -1,6 +1,6 @@
-﻿namespace ServeRestSharp.Responses.Users;
+namespace ServeRestSharp.Responses.Products;
 
-public class PostUserSuccessfullyResponse
+public class PostProductsSuccessfullyResponse
 {
     [JsonProperty("message")]
     public string? Message { get; set; }
