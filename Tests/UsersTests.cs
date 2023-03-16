@@ -15,8 +15,8 @@ public class UsersTests
     public async Task GetUsers_Success()
     {
         // Arrange
-        var resGetList = await UsersServices.GetUserList();
-        var userId = JsonConvert.DeserializeObject<GetUsersSuccessfullyResponse>(resGetList.Content!)?.Users?[0].Id!;
+        var responseList = await UsersServices.GetUserList();
+        var userId = JsonConvert.DeserializeObject<GetUsersSuccessfullyResponse>(responseList.Content!)?.Users?[0].Id!;
 
         // Act
         var response = await UsersServices.GetUserById(userId);
