@@ -1,5 +1,8 @@
+using Bogus;
+using ServeRestSharp.Requests;
 using ServeRestSharp.Responses.Products;
 using ServeRestSharp.Services;
+using ServeRestSharp.Support;
 
 namespace ServeRestSharp.Tests;
 
@@ -21,5 +24,27 @@ public class ProductsTets
 
         // Assert
         response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+    }
+
+    [Test, Description("Should create a product")]
+    public async Task CreateProduct_Successfully()
+    {
+        // Arrange
+        var faker = new Faker();
+        var token = await Commands.LoginWithAdmin();
+        var createProductPayload = new PostProductBody(
+            name: faker.Commerce.ProductName(),
+            price: faker.Random.Int(min: 0, max: 1000),
+            description: faker.Commerce.ProductDescription(),
+            quantity: faker.Random.Int(min: 0, max: 1000));
+
+        // Act
+        var response = await ProductsServices.PostProduct(createProductPayload, token!);
+
+        // Assert
+        response.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
+        var body = JsonConvert.DeserializeObject<PostProductsSuccessfullyResponse>(response.Content!);
+        body?.Message.Should().Be("Cadastro realizado com sucesso");
+        body?.Id.Should().NotBeNullOrEmpty();
     }
 }
