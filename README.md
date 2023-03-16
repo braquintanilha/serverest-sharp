@@ -30,14 +30,6 @@ Esse projeto possui um workflow do GitHub Actions que executa todos os testes à
 
 Após a execução, o arquivo de report (html) é disponibilizado no __summary__ da workflow.
 
-## W.I.P.
-
-Este projeto ainda está em desenvolvimento, e os próximos passos são:
-
-- ~~Criar o workflow no GitHub Actions para execução dos testes em pipeline de CI~~
-- ~~Desenvolver testes dos endpoints de Usuários~~
-- Desenvolver testes dos endpoints de Produtos
-
 ___
 
 Se você tem alguma dúvida ou sugestão, entre em contato! Vamos tomar um café ☕
