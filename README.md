@@ -1,6 +1,6 @@
 # ServeRest Sharp
 
-https://github.com/braquintanilha/serverest-sharp/actions/workflows/workflow.yml/badge.svg
+![Workflow Tests](https://github.com/braquintanilha/serverest-sharp/actions/workflows/workflow.yml/badge.svg)
 
 Olá, seja bem-vindo!! Esse é um projeto estudos de testes de API em __.NET 7 com C#, NUnit e RestSharp__ para o simulador de loja virtual ServeRest API. 
 
