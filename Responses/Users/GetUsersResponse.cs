@@ -14,7 +14,7 @@ public class GetUsersSuccessfullyResponse
 public class User
 {
     [JsonProperty("nome")]
-    public string? Nome { get; set; }
+    public string? Name { get; set; }
 
     [JsonProperty("email")]
     public string? Email { get; set; }
@@ -23,7 +23,7 @@ public class User
     public string? Password { get; set; }
 
     [JsonProperty("administrador")]
-    public string? Administrador { get; set; }
+    public string? Administrator { get; set; }
 
     [JsonProperty("_id")]
     public string? Id { get; set; }

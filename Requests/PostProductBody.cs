@@ -8,7 +8,7 @@ public class PostProductBody
     public string? Name { get; set; }
 
     [JsonPropertyName("preco")]
-    public decimal Price { get; set; }
+    public int Price { get; set; }
 
     [JsonPropertyName("descricao")]
     public string? Description { get; set; }
@@ -16,7 +16,7 @@ public class PostProductBody
     [JsonPropertyName("quantidade")]
     public int Quantity { get; set; }
 
-    public PostProductBody(string name, decimal price, string description, int quantity)
+    public PostProductBody(string name, int price, string description, int quantity)
     {
         Name = name;
         Price = price;

@@ -5,16 +5,16 @@ namespace ServeRestSharp.Responses.Products;
 public class Product
 {
     [JsonProperty("nome")]
-    public string? Nome { get; set; }
+    public string? Name { get; set; }
 
     [JsonProperty("preco")]
-    public int Preco { get; set; }
+    public int Price { get; set; }
 
     [JsonProperty("descricao")]
-    public string? Descricao { get; set; }
+    public string? Description { get; set; }
 
     [JsonProperty("quantidade")]
-    public int Quantidade { get; set; }
+    public int Quantity { get; set; }
 
     [JsonProperty("_id")]
     public string? Id { get; set; }
@@ -23,7 +23,7 @@ public class Product
 public class GetProductsSuccessfullyResponse
 {
     [JsonProperty("quantidade")]
-    public int Quantidade { get; set; }
+    public int QUantity { get; set; }
 
     [JsonProperty("produtos")]
     public List<Product>? Products { get; set; }
