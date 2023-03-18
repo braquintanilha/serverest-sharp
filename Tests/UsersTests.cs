@@ -60,7 +60,7 @@ public class UsersTests
     public async Task DeleteUser_Success()
     {
         // Arrange
-        var createdUser = await Commands.CreateRandomUser();
+        var createdUser = await Commons.CreateRandomUser();
 
         // Act
         var response = await UsersServices.DeleteUser(createdUser.Id);

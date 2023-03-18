@@ -15,7 +15,7 @@ public class LoginTests
     public async Task Login_Success()
     {
         // Arrange
-        var user = await Commands.CreateRandomUser();
+        var user = await Commons.CreateRandomUser();
         var payload = new PostLoginBody(user.Email!, user.Password!);
 
         // Act
