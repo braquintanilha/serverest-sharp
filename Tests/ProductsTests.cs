@@ -31,7 +31,7 @@ public class ProductsTets
     {
         // Arrange
         var faker = new Faker();
-        var token = await Commands.LoginWithAdmin();
+        var token = await Commons.LoginWithAdmin();
         var createProductPayload = new PostProductBody(
             name: faker.Commerce.ProductName(),
             price: faker.Random.Int(min: 0, max: 1000),
@@ -46,5 +46,21 @@ public class ProductsTets
         var body = JsonConvert.DeserializeObject<PostProductsSuccessfullyResponse>(response.Content!);
         body?.Message.Should().Be("Cadastro realizado com sucesso");
         body?.Id.Should().NotBeNullOrEmpty();
+    }
+
+    [Test, Description("Should delete a product")]
+    public async Task DeleteProduct_Successfully()
+    {
+        // Arrange
+        var token = await Commons.LoginWithAdmin();
+        var product = await Commons.CreateRandomProduct();
+
+        // Act
+        var response = await ProductsServices.DeleteProduct(product.Id!, token!);
+
+        // Assert
+        response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+        var body = JsonConvert.DeserializeObject<DeleteProductsSuccessfullyResponse>(response.Content!);
+        body?.Message.Should().Be("Registro excluído com sucesso");
     }
 }

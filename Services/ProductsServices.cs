@@ -12,7 +12,6 @@ public static class ProductsServices
         var request = new RestRequest("produtos");
 
         return await _client.ExecuteGetAsync(request);
-
     }
 
     public static async Task<RestResponse> GetProductById(string productId)
@@ -20,16 +19,22 @@ public static class ProductsServices
         var request = new RestRequest($"produtos/{productId}");
 
         return await _client.ExecuteGetAsync(request);
-
     }
 
     public static async Task<RestResponse> PostProduct(PostProductBody body, string token)
     {
-        var request = new RestRequest($"produtos")
+        var request = new RestRequest("produtos")
             .AddHeader("Authorization", token)
             .AddBody(body);
 
         return await _client.ExecutePostAsync(request);
+    }
 
+    public static async Task<RestResponse> DeleteProduct(string id, string token)
+    {
+        var request = new RestRequest($"produtos/{id}")
+            .AddHeader("Authorization", token);
+
+        return await _client.DeleteAsync(request);
     }
 }
